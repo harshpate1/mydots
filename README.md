@@ -1,6 +1,3 @@
-[(https://i.ytimg.com/vi/y6XCebnB9gs/maxresdefault.jpg)]](https://youtu.be/y6XCebnB9gs?si=4OtA_Rt13QgfSj03)
-[(https://i.ytimg.com/vi/NoFiYOqnC4o/maxresdefault.jpg)](https://youtu.be/NoFiYOqnC4o?si=B1K1qTzWv1JHufNB)
-
 ![Arch Linux](https://img.shields.io/badge/OS-Arch%20Linux-1793D1?logo=arch-linux)
 
 ![Hyprland](https://img.shields.io/badge/WM-Hyprland-58E1FF)
