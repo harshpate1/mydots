@@ -1,0 +1,122 @@
+#   _________ __                      .__    .__        
+#  /   _____//  |______ _______  _____|  |__ |__|_____  
+#  \_____  \\   __\__  \\_  __ \/  ___/  |  \|  \____ \ 
+#  /        \|  |  / __ \|  | \/\___ \|   Y  \  |  |_> >
+# /_______  /|__| (____  /__|  /____  >___|  /__|   __/ 
+#         \/           \/           \/     \/   |__|    
+
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = false
+
+format = """
+$os\
+$username\
+$directory\
+$git_branch\
+$git_status\
+$character\
+"""
+right_format = """
+$time\
+$status\
+$cmd_duration\
+"""
+
+palette = 'wallust'
+
+[palettes.wallust]
+
+bg = '#223143'
+fg = '#ACB3A6'
+color0 = '#414545'
+color1 = '#48573A'
+color2 = '#635674'
+color3 = '#82563A'
+color4 = '#828482'
+color5 = '#7FA24F'
+color6 = '#B290B1'
+color7 = '#808A77'
+color8 = '#5A6153'
+color9 = '#48573A'
+color10 = '#635674'
+color11 = '#82563A'
+color12 = '#828482'
+color13 = '#7FA24F'
+color14 = '#B290B1'
+color15 = '#808A77'
+
+[os]
+format = '[$symbol]($style)'
+style = '#B290B1'
+disabled = false
+
+[os.symbols]
+Arch = "󰣇 "
+
+[username]
+style_user = '#ACB3A6'
+style_root = '#7FA24F'
+format = '[$user]($style) '
+show_always = true
+
+[directory]
+truncation_length = 4
+truncate_to_repo  = true
+format            ='[$path]($style)[$read_only]($read_only_style) '
+style = "#82563A"
+read_only = "󰌾 "
+read_only_style = "red"
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+format = '[$symbol$branch(:$remote_branch)]($style) '
+symbol = " "
+style = "#7FA24F"
+
+[git_status]
+format = '([\[$all_status$ahead_behind\]]($style) )'
+style = "#828482"
+
+[character]
+success_symbol = "[❯](#B290B1)"
+error_symbol = "[❯](#7FA24F)"
+vimcmd_symbol = "[❮](#B290B1)"
+vimcmd_replace_one_symbol = "[❮](#82563A)"
+vimcmd_replace_symbol = "[❮](#82563A)"
+vimcmd_visual_symbol = "[❮](#808A77)"
+
+[cmd_duration]
+min_time = 500
+format = 'took [$duration]($style) '
+style = "#808A77"
+
+[status]
+format = '[$symbol$status]($style) '
+style = "#7FA24F"
+symbol = "✗ "
+not_executable_symbol = " "
+not_found_symbol = " "
+sigint_symbol = "󱊈 "
+signal_symbol = " "
+map_symbol = true
+
+[battery]
+full_symbol = "󰁹 "
+charging_symbol = "󰂄 "
+discharging_symbol = "󰂃 "
+unknown_symbol = "󰂑 "
+empty_symbol = "󰂎 "
+format = '[$symbol$percentage]($style) '
+
+[time]
+format = '[  $time ]($style)'
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "#808A77"

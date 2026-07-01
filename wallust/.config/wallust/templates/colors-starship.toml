@@ -1,0 +1,122 @@
+#   _________ __                      .__    .__        
+#  /   _____//  |______ _______  _____|  |__ |__|_____  
+#  \_____  \\   __\__  \\_  __ \/  ___/  |  \|  \____ \ 
+#  /        \|  |  / __ \|  | \/\___ \|   Y  \  |  |_> >
+# /_______  /|__| (____  /__|  /____  >___|  /__|   __/ 
+#         \/           \/           \/     \/   |__|    
+
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = false
+
+format = """
+$os\
+$username\
+$directory\
+$git_branch\
+$git_status\
+$character\
+"""
+right_format = """
+$time\
+$status\
+$cmd_duration\
+"""
+
+palette = 'wallust'
+
+[palettes.wallust]
+
+bg = '{{background}}'
+fg = '{{foreground}}'
+color0 = '{{color0}}'
+color1 = '{{color1}}'
+color2 = '{{color2}}'
+color3 = '{{color3}}'
+color4 = '{{color4}}'
+color5 = '{{color5}}'
+color6 = '{{color6}}'
+color7 = '{{color7}}'
+color8 = '{{color8}}'
+color9 = '{{color9}}'
+color10 = '{{color10}}'
+color11 = '{{color11}}'
+color12 = '{{color12}}'
+color13 = '{{color13}}'
+color14 = '{{color14}}'
+color15 = '{{color15}}'
+
+[os]
+format = '[$symbol]($style)'
+style = '{{color14}}'
+disabled = false
+
+[os.symbols]
+Arch = "󰣇 "
+
+[username]
+style_user = '{{foreground}}'
+style_root = '{{color13}}'
+format = '[$user]($style) '
+show_always = true
+
+[directory]
+truncation_length = 4
+truncate_to_repo  = true
+format            ='[$path]($style)[$read_only]($read_only_style) '
+style = "{{color11}}"
+read_only = "󰌾 "
+read_only_style = "red"
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+format = '[$symbol$branch(:$remote_branch)]($style) '
+symbol = " "
+style = "{{color13}}"
+
+[git_status]
+format = '([\[$all_status$ahead_behind\]]($style) )'
+style = "{{color12}}"
+
+[character]
+success_symbol = "[❯]({{color14}})"
+error_symbol = "[❯]({{color13}})"
+vimcmd_symbol = "[❮]({{color14}})"
+vimcmd_replace_one_symbol = "[❮]({{color11}})"
+vimcmd_replace_symbol = "[❮]({{color11}})"
+vimcmd_visual_symbol = "[❮]({{color7}})"
+
+[cmd_duration]
+min_time = 500
+format = 'took [$duration]($style) '
+style = "{{color7}}"
+
+[status]
+format = '[$symbol$status]($style) '
+style = "{{color13}}"
+symbol = "✗ "
+not_executable_symbol = " "
+not_found_symbol = " "
+sigint_symbol = "󱊈 "
+signal_symbol = " "
+map_symbol = true
+
+[battery]
+full_symbol = "󰁹 "
+charging_symbol = "󰂄 "
+discharging_symbol = "󰂃 "
+unknown_symbol = "󰂑 "
+empty_symbol = "󰂎 "
+format = '[$symbol$percentage]($style) '
+
+[time]
+format = '[  $time ]($style)'
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "{{color7}}"

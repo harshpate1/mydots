@@ -1,0 +1,63 @@
+@import "~/.config/rofi/config.rasi"
+
+configuration {
+	modi:                       "drun,run,filebrowser";
+    show-icons:                 true;
+    display-drun:               " apps";
+    display-run:                "  term";
+    display-filebrowser:        "  files";
+    display-window:             "󱂬 window";
+    display-ssh:                " SSH";
+    window-format:              "{w} · {c} · {t}";
+	drun-display-format:        "{name}";
+    hover-select:               true;
+    me-select-entry:            "MouseSecondary";
+    me-accept-entry:            "MousePrimary";
+}
+
+window {
+    fullscreen: true;
+    location: center;
+    y-offset: 0px;
+    border-radius:  0px;
+    background-color: @bg;
+}
+
+listview {
+    background-color:   transparent;
+    margin:     12px 0 0;
+    lines:      5;
+    columns:    5;
+    spacing:    6px;
+    fixed-height: true;
+    fixed-columns: true;
+    cycle: true;
+    scrollbar: false;
+    dynamic: true;
+    layout: vertical;
+    fixed-columns: true;
+    fixed-height: true;
+}
+
+element {
+    orientation:    vertical;
+    padding:        35px 10px;
+    spacing:        15px;
+    border-radius:  16px;
+    children:       [ element-icon, element-text];
+    cursor:         pointer;
+}
+
+element-icon {
+    size:               8%;
+    vertical-align:     0.5;
+    horizontal-align:   0.5;
+    cursor:             pointer;
+}
+
+element-text {
+    text-color: inherit;
+    horizontal-align: 0.5;
+    vertical-align:   0.5;
+    cursor:             pointer;
+}

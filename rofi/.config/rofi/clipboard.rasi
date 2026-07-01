@@ -1,0 +1,48 @@
+@import "~/.config/rofi/config.rasi"
+
+/*
+      _ _       _                         _ 
+  ___| (_)_ __ | |__   ___   __ _ _ __ __| |
+ / __| | | '_ \| '_ \ / _ \ / _` | '__/ _` |
+| (__| | | |_) | |_) | (_) | (_| | | | (_| |
+ \___|_|_| .__/|_.__/ \___/ \__,_|_|  \__,_|
+         |_|                                
+
+*/
+
+window {
+    width: 700px;
+    height: inherit;
+}
+
+mainbox {
+    children: [ "inputbar", "message", "listview"];
+}
+
+entry {
+    widht: inherit;
+    placeholder: "Search...";
+}
+
+listview {
+    columns: 2;
+    lines: 8;
+    fixed-height: true;
+    spacing: 6px;
+    cycle: true;
+}
+
+element {
+  orientation: horizontal;
+}
+
+element-icon {
+  size: 2%;
+}
+
+element-text {
+  horizontal-align: 0;
+  vertical-align: 0.5;
+  margin: 0px;
+  padding: 0px;
+}

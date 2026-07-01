@@ -1,0 +1,27 @@
+[[plugin.deps]]
+use = "ndtoan96/ouch"
+rev = "406ce6c"
+hash = "f5afc904d5106ee368c8aa2ded43bd74"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:piper"
+rev = "39aaf6d"
+hash = "12126fca34f9f1802bb57b88292f57af"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:chmod"
+rev = "39aaf6d"
+hash = "f0c8c378184d5f8abd1b095a443d336d"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:full-border"
+rev = "39aaf6d"
+hash = "7b625412411be411153886894d9acaf"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:zoom"
+rev = "39aaf6d"
+hash = "e8e279463ee99c940e6945a14cf4aa9e"
+
+[flavor]
+deps = []

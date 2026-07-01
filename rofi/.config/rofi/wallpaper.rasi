@@ -1,0 +1,52 @@
+@import "~/.config/rofi/config.rasi" 
+
+window {
+    location:       center;
+    y-offset:       0px;
+    width:          1500px;
+    border-radius:  24px;
+    background-color: @bg;
+}
+
+listview {
+    background-color:   transparent;
+    margin:     12px 0 0;
+    lines:      1;
+    columns:    5;
+    spacing:    6px;
+    fixed-height: true;
+    fixed-columns: true;
+}
+
+element {
+    orientation:    vertical;
+    padding:        0px 10px;
+    spacing:        6px;
+    border-radius:  16px;
+    children:       [ element-icon ];
+    cursor:         pointer;
+    background-color:   transparent;
+}
+
+element-icon {
+    size:               320px;
+    vertical-align:     0.5;
+    horizontal-align:   0.5;
+    cursor:             pointer;
+}
+
+element normal active {
+    text-color: @border-color;
+}
+
+element alternate active {
+    text-color: @alternate-active-background;
+}
+
+element selected normal, element selected active {
+    text-color: @normal-background;
+    background-color:   transparent;
+    border-color: @border-color;
+    border-radius: 16px;
+    border: 2px;
+}

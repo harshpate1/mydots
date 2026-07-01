@@ -1,0 +1,227 @@
+@import "/home/harsh/.config/waybar/colors.css";
+
+@define-color bar-bg       	alpha(@background, 0.6);
+
+@define-color card-bg       	alpha(@background, 0.45);
+@define-color card-bg-hi    	alpha(@background, 0.55);
+
+@define-color card-border  	alpha(@color0, 0.35);
+
+@define-color text-main    	alpha(@foreground, 0.9);
+@define-color text-muted    	alpha(@foreground, 0.65);
+
+@define-color hover         	alpha(@color12, 0.18);
+@define-color active        	alpha(@color12, 0.35);
+
+@define-color elevated		@color1;
+
+@define-color cava-g1 @primary;
+@define-color cava-g2 @secondary;
+@define-color cava-g3 @tertiary;
+
+* {
+	border: none;
+	border-radius: 0px;
+
+	font-family: "FiraCode Nerd Font Propo";
+	font-weight: 600;
+	/*letter-spacing: 0.5px;*/
+	font-size: 12px;
+	transition: background-color 0.25s ease, color 0.25s ease;
+	
+	min-height: 0;
+	padding: 0;
+	margin: 0;
+}
+
+window#waybar {
+	background-color: @bar-bg;
+}
+
+tooltip {
+	background: @card-bg;
+	border: 1px solid @card-border;
+	border-radius: 10px;
+}
+
+tooltip label {
+	color: @text-main;
+	padding: 8px 10px;
+}
+
+#workspaces {
+	padding: 6px 6px;
+	margin: 0 0 0 12px;
+}
+
+#workspaces button {
+	color: alpha(@foreground, 0.5);
+}
+
+#workspaces button.active {
+	color: @foreground;
+}
+
+#workspaces button:hover {
+	color: @text-main;
+}
+
+#workspaces button.urgent {
+	color: red;
+}
+
+#custom-launcher {
+	padding: 0 9px;
+	color: @color7;
+	transition: all 0.25s ease-in-out;
+	margin: 0 2px 0 10px;
+}
+
+#battery,
+#custom-currently-playing, 
+#custom-cava,
+#tray,
+#pulseaudio,
+#network,
+#custom-kdeconnect,
+#clock,
+#custom-weather,
+#custom-notification,
+#custom-power,
+#backlight,
+#cpu,
+#disk,
+#idle_inhibitor,
+#idle_inhibitor.deactivated,
+#memory,
+#systemd-failed-units,
+#systemd-failed-units.ok,
+#systemd-failed-units.degraded,
+#temperature,
+#temperature.warning,
+#custom-nvidia,
+#custom-reboot,
+#custom-lock,
+#custom-logout,
+#bluetooth,
+#bluetooth.connected,
+#bluetooth.off,
+#bluetooth.disabled,
+#custom-color-picker,
+#custom-kdeconnect,
+#custom-clipboard,
+#custom-nightmode {
+	padding: 0 9px;
+	margin: 0 0 0 2px;
+	color: @color13;
+	transition: all 0.25s ease-in-out;
+}
+
+#privacy,
+#privacy-item,
+#privacy-item.screenshare,
+#privacy-item.audio-in,
+#privacy-item.audio-out {
+	padding: 0 4px;
+	margin: 0 0 0 2px;
+	color: @color13;
+	transition: all 0.25s ease-in-out;
+}
+
+
+#battery:hover,
+#pulseaudio:hover,
+#network:hover,
+#clock:hover,
+#custom-weather:hover,
+#custom-notification:hover,
+#backlight:hover,
+#cpu:hover,
+#disk:hover,
+#custom-power:hover,
+#idle_inhibitor:hover,
+#memory:hover,
+#privacy:hover,
+#privacy-item:hover,
+#privacy-item.screenshare:hover,
+#privacy-item.audio-in:hover,
+#privacy-item.audio-out:hover,
+#systemd-failed-units:hover,
+#systemd-failed-units.ok:hover,
+#systemd-failed-units.degraded:hover,
+#temperature:hover,
+#temperature.warning:hover,
+#custom-nvidia:hover,
+#custom-reboot:hover,
+#custom-lock:hover,
+#custom-logout:hover,
+#custom-currently-playing:hover,
+#custom-launcher:hover,
+#bluetooth:hover,
+#bluetooth.connected:hover,
+#bluetooth.off :hover,
+#bluetooth.disabled:hover,
+#custom-color-picker:hover,
+#custom-kdeconnect:hover,
+#custom-clipboard:hover,
+#custom-nightmode:hover {
+	background-color: alpha(@color1, 0.5);
+	border-radius: 0px
+}
+
+#idle_inhibitor.activated {
+	color: @color7;
+}
+
+#custom-weather {
+	color: @color7;
+}
+
+#clock {
+	color: @color7;
+}
+
+#tray {
+	color: @color13;
+}
+
+#tray:hover {
+	color: @color12;
+}
+
+#tray menu {
+	background: @card-bg-hi;
+	border: 1px solid @card-border;
+	border-radius: 10px;
+}
+
+#custom-power {
+	color: @color13;
+	margin: 0 10px 0 2px;
+}
+
+#custom-power:hover,
+#temperature.critical {
+	color: red;
+}
+
+#custom-cava {
+	color: alpha(@color15, 0.8);
+}
+
+#custom-currently-playing {
+	color: alpha(@color15, 1);	
+}
+
+/* Temperature */
+#custom-weather.cold { color: #89b4fa; }
+#custom-weather.mild { color: #a6e3a1; }
+#custom-weather.warm { color: #f9e2af; }
+#custom-weather.hot  { color: #f38ba8; }
+
+/* AQI overlay */
+#custom-weather.aqi-good      { text-shadow: 0 0 2px #a6e3a1; }
+#custom-weather.aqi-fair      { text-shadow: 0 0 2px #f9e2af; }
+#custom-weather.aqi-moderate  { text-shadow: 0 0 2px #fab387; }
+#custom-weather.aqi-poor      { text-shadow: 0 0 2px #f38ba8; }
+#custom-weather.aqi-verypoor  { text-shadow: 0 0 2px #cba6f7; }

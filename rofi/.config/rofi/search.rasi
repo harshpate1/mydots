@@ -1,0 +1,19 @@
+@import "~/.config/rofi/config.rasi"
+
+window {
+	width: 40%;
+	orientation: horizontal;
+	height: inherit;
+    y-offset: 15px;
+    location: north;
+    children: [ "entry", "message" ];
+    border: 2px;
+}
+
+entry {
+	expand: true;
+	placeholder: " DuckDuckGo";
+	horizontal-align: 0.5;
+	padding: 10px;
+	border-radius: 16px;
+}

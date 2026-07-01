@@ -1,0 +1,51 @@
+@import "~/.config/rofi/config.rasi" 
+
+/*
+   __                _ _ 
+  /__\ __ ___   ___ (_|_)
+ /_\| '_ ` _ \ / _ \| | |
+//__| | | | | | (_) | | |
+\__/|_| |_| |_|\___// |_|
+                  |__/   
+*/
+
+mainbox {
+    children: [ "inputbar", "message", "listview"];
+}
+
+window {
+    width: 372px;
+    height: inherit;
+}
+
+entry {
+    width: 37%;
+    placeholder: "Search/Choose Emoji's";
+    horizontal-align: 0.0;
+}
+
+listview {
+    columns: 5;
+    lines: 5;
+    fixed-height: false;
+    scrollbar: true;
+    spacing: 6px;
+    cycle: true;
+}
+
+element {
+    orientation: horizontal;
+}
+
+element-icon {
+  size: 0%;
+}
+
+element-text {
+    font: "Noto Color Emoji 18";
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+    padding: 0px 0px 25px 0px;
+    margin: 0px;
+    cursor: pointer;
+}

@@ -1,0 +1,55 @@
+@import "~/.config/rofi/config.rasi" 
+
+configuration {
+	modi:                       "drun";
+    show-icons:                 true;
+    display-drun:               "󰣇";
+    display-filebrowser:        " ";
+    display-window:             "󱂬";
+    window-format:              "{w} · {c} · {t}";
+	drun-display-format:        "{name}";
+    hover-select:               true;
+    me-select-entry:            "MouseSecondary";
+    me-accept-entry:            "MousePrimary";
+}
+
+window {
+    location:       center;
+    y-offset:       0px;
+    width:          700;
+    border-radius:  24px;
+    background-color: @bg;
+}
+
+listview {
+    background-color:   transparent;
+    margin:     12px 0 0;
+    lines:      3;
+    columns:    5;
+    spacing:    6px;
+    fixed-height: true;
+    fixed-columns: true;
+}
+
+element {
+    orientation:    vertical;
+    padding:        8px 16px;
+    spacing:        6px;
+    border-radius:  16px;
+    children:       [ element-icon, element-text];
+    cursor:         pointer;
+}
+
+element-icon {
+    size:               2.5em;
+    vertical-align:     0.5;
+    horizontal-align:   0.5;
+    cursor:             pointer;
+}
+
+element-text {
+    text-color: inherit;
+    horizontal-align: 0.5;
+    vertical-align:   0.5;
+    cursor:             pointer;
+}
