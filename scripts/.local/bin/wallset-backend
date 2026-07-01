@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+IMAGE="${1:-}"
+[ -f "$IMAGE" ] || exit 1
+
+CACHE="$HOME/.cache/hypr"
+CURRENT="$CACHE/current_wallpaper"
+
+mkdir -p "$CACHE"
+ln -sf "$IMAGE" "$CURRENT"
+
+# --- AWWW --------------------------------------------------------
+
+if ! pgrep -x awww-daemon >/dev/null; then
+    awww-daemon &
+    sleep 0.3
+fi
+
+awww img "$IMAGE" \
+    --transition-type random \
+    --transition-fps 60 \
+    --transition-duration 2 &
+
+# --- COLORS (CACHED) --------------------------------------------
+
+wallust run "$IMAGE"
+
+# --- UI RELOAD --------------------------------------------------
+
+pkill -SIGUSR2 waybar 2>/dev/null || waybar &
+pkill -SIGUSR1 swaync 2>/dev/null || swaync &
+
+notify-send -i "$IMAGE" \
+    "Wallpaper applied" \
+    "$(basename "$IMAGE")"

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+options=$(printf "Hyprland\nKitty\nWaybar\nSwaync" | rofi -dmenu -p "Edit Config" -theme "~/.local/share/rofi/themes/rounded-template.rasi")
+
+case "$options" in
+	"Hyprland") kitty --hold nvim "/home/harsh/.config/hypr/hyprland.conf" ;;
+	"Kitty") kitty --hold nvim "/home/harsh/.config/kitty/kitty.conf" ;;
+	"Waybar") kitty --hold nvim "/home/harsh/.config/waybar/config" ;;
+	"SwayNC") kitty --hold nvim "/home/harsh/.config/swaync/config.json" ;;
+esac

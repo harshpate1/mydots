@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+WAYBAR_DIR="$HOME/.config/waybar"
+
+CONFIGS=$(find "$WAYBAR_DIR" -maxdepth 1 -type d \
+  ! -name "scripts" \
+  ! -name ".git" \
+  ! -path "$WAYBAR_DIR")
+
+CHOICE=$(basename -a $CONFIGS | rofi -dmenu -p "Waybar layout")
+
+[ -z "$CHOICE" ] && exit 0
+
+"$WAYBAR_DIR/launch.sh" "$CHOICE"

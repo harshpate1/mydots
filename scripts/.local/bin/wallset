@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+WALL_DIR="$HOME/Pictures/Wallpaper"
+CACHE="$HOME/.cache/rofi-wallpapers"
+SIZE=180
+
+mkdir -p "$CACHE"
+
+# list wallpapers
+if [ "$#" -eq 0 ]; then
+    shopt -s nullglob
+    for img in "$WALL_DIR"/*.{jpg,png,webp}; do
+        base="$(basename "$img")"
+        thumb="$CACHE/$base.png"
+
+        # generate thumbnail only once
+        if [ ! -f "$thumb" ]; then
+            magick "$img" -resize ${SIZE}x${SIZE}\> "$thumb"
+        fi
+
+        printf "%s\x00icon\x1f%s\n" "$base" "$thumb"
+    done
+    exit 0
+fi
+
+# selection
+exec ~/.local/bin/wallset-backend "$WALL_DIR/$1"
