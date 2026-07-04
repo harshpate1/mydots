@@ -1,46 +1,46 @@
 /* wallust template - colors-rofi */
 
 * {
-active-background: #6C8185;
-active-foreground: #B6AEA6;
-normal-background: #0D1207;
-normal-foreground: #B6AEA6;
-urgent-background: #6F8A4F;
-urgent-foreground: #B6AEA6;
+active-background: #907C8B;
+active-foreground: #B2ACB4;
+normal-background: #192128;
+normal-foreground: #B2ACB4;
+urgent-background: #758A9C;
+urgent-foreground: #B2ACB4;
 
-alternate-active-background: #9A7B41;
-alternate-active-foreground: #B6AEA6;
-alternate-normal-background: #0D1207;
-alternate-normal-foreground: #B6AEA6;
-alternate-urgent-background: #0D1207;
-alternate-urgent-foreground: #B6AEA6;
+alternate-active-background: #975D56;
+alternate-active-foreground: #B2ACB4;
+alternate-normal-background: #192128;
+alternate-normal-foreground: #B2ACB4;
+alternate-urgent-background: #192128;
+alternate-urgent-foreground: #B2ACB4;
 
-selected-active-background: #6C8185;
-selected-active-foreground: #0D1207;
-selected-normal-background: #6C8185;
-selected-normal-foreground: #0D1207;
-selected-urgent-background: #9A7B41;
-selected-urgent-foreground: #0D1207;
+selected-active-background: #907C8B;
+selected-active-foreground: #192128;
+selected-normal-background: #907C8B;
+selected-normal-foreground: #192128;
+selected-urgent-background: #975D56;
+selected-urgent-foreground: #192128;
 
 bg-color: rgba(0,0,0,0.6);
-bg: #0D120798;
-fg: #B6AEA6;
-border-color: #6C8185;
+bg: #19212898;
+fg: #B2ACB4;
+border-color: #907C8B;
 
-color0: #2D3130;
-color1: #5D4C3A;
-color2: #5D6A4B;
-color3: #9A7B41;
-color4: #6C8185;
-color5: #6F8A4F;
-color6: #97B0AA;
-color7: #8E8377;
-color8: #635C53;
-color9: #5D4C3A;
-color10: #5D6A4B;
-color11: #9A7B41;
-color12: #6C8185;
-color13: #6F8A4F;
-color14: #97B0AA;
-color15: #8E8377;
+color0: #413738;
+color1: #564859;
+color2: #526068;
+color3: #975D56;
+color4: #907C8B;
+color5: #758A9C;
+color6: #D3716E;
+color7: #89808C;
+color8: #605A62;
+color9: #564859;
+color10: #526068;
+color11: #975D56;
+color12: #907C8B;
+color13: #758A9C;
+color14: #D3716E;
+color15: #89808C;
 }
