@@ -136,6 +136,24 @@ hl.window_rule({
 	suppress_event = "activate",
 })
 
+-- Xpad
+hl.window_rule({
+	name = "Xpad",
+	match = { class = "xpad" },
+	float = true,
+	center = false,
+	size = "800 600",
+})
+
+-- Blanket
+hl.window_rule({
+	name = "Blanket",
+	match = { class = "com.rafaelmardojai.Blanket" },
+	float = true,
+	center = false,
+	size = "600 900",
+})
+
 ---------------------------------------------------------------------------------------
 
 --  ___     _ _

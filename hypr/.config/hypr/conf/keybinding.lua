@@ -33,7 +33,7 @@ hl.bind(
 	)
 ) -- Open the clipboard
 hl.bind("XF86Calculator", hl.dsp.exec_cmd("qalculate-gtk")) -- Open the calculator
-hl.bind(mainMod .. " + XF86Calculator", hl.dsp.exec_cmd("ca.vtrlx.Parchment")) -- Open parchment app (notepad)
+hl.bind(mainMod .. " + XF86Calculator", hl.dsp.exec_cmd("xpad")) -- Open xpad
 hl.bind(mainMod .. "+ XF86Launch2", hl.dsp.exec_cmd("$HOME/.local/bin/powermenu.sh")) -- open powermenu
 hl.bind("XF86Launch2", hl.dsp.exec_cmd("hyprlock")) -- execute hyprlock
 hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m output -m eDP-1 -o ~/Pictures/Screenshots")) -- capture fullscreen
