@@ -10,14 +10,14 @@ local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 -------------------------------------
 
 local terminal = "kitty"
-local fileManager = "dolphin"
+local fileManager = "thunar"
 local browser = "helium-browser"
 
 -------------------------------------
 
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(terminal)) -- Open the terminal
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser)) -- Open the browser
-hl.bind(mainMod .. " + CTRL + B", hl.dsp.exec_cmd("librewolf")) -- Open the alt browser
+hl.bind(mainMod .. " + CTRL + B", hl.dsp.exec_cmd("zen-browser")) -- Open the alt browser
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager)) -- Open the filemanager
 hl.bind(mainMod .. " + SHIFT + E", hl.dsp.exec_cmd("kitty -e yazi")) -- Open the filemanager
 hl.bind(
@@ -34,8 +34,8 @@ hl.bind(
 ) -- Open the clipboard
 hl.bind("XF86Calculator", hl.dsp.exec_cmd("qalculate-gtk")) -- Open the calculator
 hl.bind(mainMod .. " + XF86Calculator", hl.dsp.exec_cmd("ca.vtrlx.Parchment")) -- Open parchment app (notepad)
-hl.bind("XF86Launch2", hl.dsp.exec_cmd("$HOME/.local/bin/powermenu.sh")) -- open powermenu
-hl.bind(mainMod .. " + XF86Launch2", hl.dsp.exec_cmd("hyprlock")) -- execute hyprlock
+hl.bind(mainMod .. "+ XF86Launch2", hl.dsp.exec_cmd("$HOME/.local/bin/powermenu.sh")) -- open powermenu
+hl.bind("XF86Launch2", hl.dsp.exec_cmd("hyprlock")) -- execute hyprlock
 hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m output -m eDP-1 -o ~/Pictures/Screenshots")) -- capture fullscreen
 hl.bind(mainMod .. " + PRINT", hl.dsp.exec_cmd("hyprshot -m window -o ~/Pictures/Screenshots")) -- capture a window
 hl.bind("SHIFT + PRINT", hl.dsp.exec_cmd("hyprshot -m region --raw | satty --filename -")) -- select and capture for regional screenshot with satty for annotation
