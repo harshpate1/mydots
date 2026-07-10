@@ -157,3 +157,31 @@ hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
 ---------------------------------------------------------------------------------------
+
+-- Game Mode
+hl.bind(mainMod .. " + F1", function()
+	local gameMode = (hl.get_config("animations.enabled") == false)
+
+	if gameMode then
+		hl.exec_cmd("hyprctl reload")
+		return
+	end
+
+	hl.config({
+		general = {
+			gaps_in = 0,
+			gaps_out = 0,
+			border_size = 0,
+		},
+
+		animations = {
+			enabled = false,
+		},
+
+		decoration = {
+			shadow = { enabled = false },
+			blur = { enabled = false },
+			rounding = 0,
+		},
+	})
+end)

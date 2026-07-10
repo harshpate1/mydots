@@ -27,36 +27,36 @@ palette = 'wallust'
 
 [palettes.wallust]
 
-bg = '#192128'
-fg = '#B2ACB4'
-color0 = '#413738'
-color1 = '#564859'
-color2 = '#526068'
-color3 = '#975D56'
-color4 = '#907C8B'
-color5 = '#758A9C'
-color6 = '#D3716E'
-color7 = '#89808C'
-color8 = '#605A62'
-color9 = '#564859'
-color10 = '#526068'
-color11 = '#975D56'
-color12 = '#907C8B'
-color13 = '#758A9C'
-color14 = '#D3716E'
-color15 = '#89808C'
+bg = '#231B1D'
+fg = '#B1AAAA'
+color0 = '#201E19'
+color1 = '#524242'
+color2 = '#516771'
+color3 = '#967F84'
+color4 = '#599181'
+color5 = '#E45D4B'
+color6 = '#9E9375'
+color7 = '#867D7D'
+color8 = '#5E5757'
+color9 = '#524242'
+color10 = '#516771'
+color11 = '#967F84'
+color12 = '#599181'
+color13 = '#E45D4B'
+color14 = '#9E9375'
+color15 = '#867D7D'
 
 [os]
 format = '[$symbol]($style)'
-style = '#D3716E'
+style = '#9E9375'
 disabled = false
 
 [os.symbols]
 Arch = "󰣇 "
 
 [username]
-style_user = '#B2ACB4'
-style_root = '#758A9C'
+style_user = '#B1AAAA'
+style_root = '#E45D4B'
 format = '[$user]($style) '
 show_always = true
 
@@ -64,7 +64,7 @@ show_always = true
 truncation_length = 4
 truncate_to_repo  = true
 format            ='[$path]($style)[$read_only]($read_only_style) '
-style = "#975D56"
+style = "#967F84"
 read_only = "󰌾 "
 read_only_style = "red"
 truncation_symbol = "…/"
@@ -78,28 +78,28 @@ truncation_symbol = "…/"
 [git_branch]
 format = '[$symbol$branch(:$remote_branch)]($style) '
 symbol = " "
-style = "#758A9C"
+style = "#E45D4B"
 
 [git_status]
 format = '([\[$all_status$ahead_behind\]]($style) )'
-style = "#907C8B"
+style = "#599181"
 
 [character]
-success_symbol = "[❯](#D3716E)"
-error_symbol = "[❯](#758A9C)"
-vimcmd_symbol = "[❮](#D3716E)"
-vimcmd_replace_one_symbol = "[❮](#975D56)"
-vimcmd_replace_symbol = "[❮](#975D56)"
-vimcmd_visual_symbol = "[❮](#89808C)"
+success_symbol = "[❯](#9E9375)"
+error_symbol = "[❯](#E45D4B)"
+vimcmd_symbol = "[❮](#9E9375)"
+vimcmd_replace_one_symbol = "[❮](#967F84)"
+vimcmd_replace_symbol = "[❮](#967F84)"
+vimcmd_visual_symbol = "[❮](#867D7D)"
 
 [cmd_duration]
 min_time = 500
 format = 'took [$duration]($style) '
-style = "#89808C"
+style = "#867D7D"
 
 [status]
 format = '[$symbol$status]($style) '
-style = "#758A9C"
+style = "#E45D4B"
 symbol = "✗ "
 not_executable_symbol = " "
 not_found_symbol = " "
@@ -119,4 +119,4 @@ format = '[$symbol$percentage]($style) '
 format = '[  $time ]($style)'
 disabled = false
 time_format = "%R" # Hour:Minute Format
-style = "#89808C"
+style = "#867D7D"
